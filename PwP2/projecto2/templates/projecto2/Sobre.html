@@ -1,0 +1,26 @@
+{% extends 'projecto2/base.html' %}
+
+{% block cssLink %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'projecto2/css/sobre.css' %}">
+{% endblock  %}
+
+
+{% block header %}
+        <h1>Sobre</h1>
+{% endblock  %}
+
+{% block main %}    
+
+        <form class="formulario" method="POST" >
+
+            <fieldset>
+                {% csrf_token %}
+                {{ formulario.as_p}}
+            </fieldset>
+
+            <label class="enviar"><input  class="submisao" type="submit"></label>
+            
+        </form>
+{% endblock  %}
+

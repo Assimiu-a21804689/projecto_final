@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <form method="post" action="mailto:assimium2@gmail.com" autocomplete="on">
+        <header>
+            <h3>Quizz</h3>
+            
+        </header>
+
+        <main>
+
+            <section class="quiz"> 
+
+                <fieldset>
+                    <div>
+                        <legend class="legen">Dados Pessoais</legend>
+                        
+                        <label>
+                            Nome: <input type="text" nome="nome" placeholder="nome">
+                        </label>
+                        
+                        <label>
+                            Apelido: <input type="text" nome="Apelido" placeholder="apelido" value="">
+                        </label>
+                        
+                        
+
+                        <label>
+                            Email: <input type="email" nome = "Email" placeholder="Email" value="">
+                        </label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <div>
+                        <label>
+                            Qual é nome da capital da Guiné-Bissau?
+                            <input type="text" name="nome cidade" size="20">
+                        </label>
+                        
+
+                        <label>
+                            <legend>
+                                Deseja vistar Guiné-Bissau?
+                            </legend>
+                        
+                            <label for="sim">Sim</label>
+                            <input type="radio" name="visita" id="sim" required>
+
+                            <label for="nao">Não</label>
+                            <input type="radio" name="visita" id="nao">
+                        </label>
+                        
+                        <label>
+                            <legend>Deseja visitar algumas das ilhas?</legend>
+                            
+                            <input type="checkbox" name="" id="localVisita1">
+                            <label for="localVisita1">Bubaque</label>
+                            
+
+                            <input type="checkbox" name="" id="localVisita2">
+                            <label for="localVisita2">Djiu de Rei</label>
+                            
+
+                            <input type="checkbox" name="" id="localVisita3">
+                            <label for="">Djiu de Galinha</label>
+                            <br>
+
+                            <input type="checkbox" name="" id="localVisita4">
+                            <label for="localVisita5">Caravela</label>
+                        
+                        </label>
+                        
+
+                        <label>
+                            Indica uma data prevista para sua visita:
+                            <input type="date" name="" id="" min="2020-03-24" max="2030-12-12" autocomplete="off">
+                        </label>
+                        
+
+                        <label>
+                            Ouviu falado de uma das região?
+                            <select name="cidade" id="">
+                                <option value="quebo">Quebo</option>
+                                <option value="buba">Buba</option>
+                                <option value="guidali">Guidali</option>
+                            </select>
+                        </label>
+                        
+
+                        <label for="lista">O que lhe deixa assustado sobre africa?</label>
+                        <input list="listas" name="" id="lista">
+                        <datalist id="listas">
+                            <option value="Cobras">
+                            <option value="Sapos">
+                            <option value="Medo dos negros">
+                            <option value="Mosquitos">
+                            <option value="Falta de Energia">
+                        </datalist>
+                        
+
+
+
+                        <label>
+                            <legend>O tem a dizer sobre africa e africanos?</legend>
+                            <textarea name="areiaSugestao" id="fidib" cols="30" rows="10" maxlength="100"></textarea>
+                        </label>
+                        
+                        
+                        <label>
+                            <legend>Na escala de 0 á 100 quanto gosta de africa?</legend>
+                            <input type="range" min="0" max="100" name="valorLido" value="0"
+                            oninput="valorApresentado.value = parseInt(valorLido.value)">
+                            <output name="valorApresentado" for="valorLido">0</output> %
+                        </label>
+                    
+                        
+                        <label>
+                            Selecione um cor que a bandeira da Guiné-Bissau tem:
+                            <input type="color">
+                        </label>
+                        
+                        
+                        <label>
+                            Introduza número de cores da Guiné-Bissau:
+                            <input type="number" max="10" min="1" step="2">
+                        </label>
+                        
+
+                        <label>
+                            Selecione alguma coisas sobre africa:
+                            <input type="file" id="" multiple>
+                        </label>
+                        
+                        
+
+
+                        <input type="image" src="imagens/inha_bubaque_pequena.jpg" height="50" width="50">
+                        
+                        
+                        <input class="submit" type="submit" value="Enviar Formulario">
+                        
+                        
+                        
+                        
+                    </div>
+             
+                </fieldset>
+
+
+
+            </section>
+
+        </main>
+
+        <footer>
+            <h3><a href="./comentarios.html">Comentario</a></h3>
+        </footer>
+        
+        
+
+        
+    </form>
+</body>
+</html>

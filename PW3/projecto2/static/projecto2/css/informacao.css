@@ -1,0 +1,37 @@
+*{
+    box-sizing: border-box;
+}
+header{
+    position: fixed;
+    display: grid;
+    width: 100%;
+    background-color: rgb(41, 41, 56);
+    color: white;
+    padding: 2px;
+    margin-top: -16px;
+    margin-left: -8px;
+}
+header h1{
+    text-align: center;
+}
+main{
+    padding: 40px;
+    border: solid 1px;
+}
+main div{
+    padding-top: 50px;
+    
+    margin: 2px;
+}
+h1, h2{
+    text-align: center;
+    padding: 5px;
+}
+
+
+@media only screen and (min-width: 600px){
+    main{
+        padding: 200px;
+        padding-top: 0px;
+    }
+}

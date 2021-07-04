@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width = device-width initial-scale = 1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <title>Lo</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'projecto2/css/estilos.css' %}">
+
+    {% block cssLink %}
+
+    {% endblock  %}
+
+</head>
+<body>
+
+    <header>
+
+        <h1>LoJa OnLine</h1>
+        <div>
+            <div class="comprar">
+                <a href="/" class="botomCompra">COMPRAR</a>
+                <div class="menuCompra">
+                    <a href="{% url 'projecto2:computador' %}">Computadores</a>
+                    <a href="{% url 'projecto2:telefone' %}">Telemóveis</a>
+                    <a href="{% url 'projecto2:tablet' %}">Table</a>
+                </div>
+            </div>
+
+
+        <div>
+            <a href="/" class="botomCompra">Sobre</a>
+            <div class="menuCompra">
+            <a href="{% url 'projecto2:informacao' %}">Informação</a>
+            <a href="{% url 'projecto2:sobre' %}">Sobre</a>
+            <a href="{% url 'projecto2:contacto' %}">Contacto</a>
+            <a href="{% url 'projecto2:principal' %}">CON</a>
+
+            </div>
+        </div>
+        </div>
+    </header>
+
+
+
+
+    <aside>
+        <nav>
+            <input type="checkbox" id="n">
+            <label class="menu" for="n">Menu</label>
+            <ul class="janelaMenu">
+                <li><a href="{% url 'projecto2:computador' %}">Computadores</a></li>
+                <li><a href="{% url 'projecto2:telefone' %}">Telemóveis</a></li>
+                <li><a href="{% url 'projecto2:tablet' %}">Table</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+
+    <footer class="oculto">
+        {% block footer %}
+
+        {% endblock  %}
+    </footer>
+    <main class="main">
+        {% block main %}
+        
+        {% endblock  %}
+    </main>
+
+
+
+</body>
+</html>

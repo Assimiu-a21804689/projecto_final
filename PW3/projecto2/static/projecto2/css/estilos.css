@@ -1,0 +1,246 @@
+*, a{
+    box-sizing: border-box;
+}
+body{
+    margin-top: 0px;
+    background-color: whitesmoke;
+}
+ul, a{
+    background-color: rgba(241, 221, 214, 0.315);
+    list-style: none;
+    text-decoration: none;
+    margin: 0px;
+}
+
+header{
+    position: fixed;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    width: 100%;
+    background-color: rgb(41, 41, 56);
+    color: white;
+    padding: 2px;
+    margin-top: -20px;
+    padding-top: 10px;
+    margin-left: -8px;
+}
+
+header div label{
+    font-size: 30px;
+    padding: 10px;
+    margin-left:30px; 
+}
+
+header h1{
+    font-size: 30px;
+    text-align: center;
+}
+.botomCompra{
+    display: none;
+}
+.botomVenda{
+    display: grid;
+    margin-top: 20px;
+    margin-right: 60px;
+    cursor: pointer;
+    color: cornsilk;
+    padding: 8px;
+    background-color:rgb(72, 72, 94);
+    border-radius: 6px;
+}
+
+aside{
+    position: fixed;
+    display: grid;
+    margin-top: 1px;
+    padding: 20px;
+    padding-top: 100px;
+    width: 100%;
+
+}
+aside .menu{
+    color: white;
+    background-color: rgb(56, 55, 66);
+    text-align: center;
+    padding: 10px;
+    margin-left: 122px;
+    border-radius: 6px;
+}
+.menuCompra{
+    display: none;
+}
+
+aside ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 10px;
+    background-color: rgb(42, 41, 56);
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+aside .janelaMenu li{
+    display: grid;
+    margin: 2px;
+    text-align: center;
+    background-color: rgb(41, 41, 56);
+}
+.janelaMenu li a{
+    padding: 10px;
+    color: rgb(247, 236, 236);
+    font-size: 12px;
+}
+
+.janelaMenu{
+    display: none;
+}
+
+
+.janelaMenu:hover{
+    display: grid;
+}
+#n{
+    display: none;
+}
+
+input[type = "checkbox"]:checked ~ .janelaMenu{
+    display: grid;
+}
+
+main{
+    margin-top: 20px;
+}
+
+main section{
+    margin: 0px;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    align-items: center;
+    width: 100%;
+
+}
+
+main section img{
+    margin: 0px;
+    height: 190px;
+    width: 180px;
+}
+
+footer{
+    padding-top: 68px;
+}
+
+footer nav{
+    display: grid;
+    padding-top: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-left: 40px;
+}
+
+footer nav a{
+    background-color: rgb(56, 55, 66);
+    padding: 10px;
+    border: solid 1px;
+    border-radius: 10px;
+    color: cornsilk;
+}
+
+.oculto{
+    display: none;
+}
+
+@media only screen and (min-width: 600px){
+    header{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        margin-left: -8px;
+    }
+    header div {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: rgb(41, 41, 56);
+    }
+
+   .menuCompra{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding-right: 10px;
+    
+    }
+    .menuCompra a{
+        padding: 9px;
+        margin: 1px;
+        text-align: center;
+        color: cornsilk;
+        background-color: rgb(95, 146, 95);
+        border: solid 1px;
+        border-radius: 10px;
+    }
+    .botomCompra{
+        display: grid;
+    }
+
+    header .botomCompra, .botomVenda{
+        margin-top: 0;
+        cursor: pointer;
+        color: cornsilk;
+        padding: 10px;
+        background-color: rgb(83, 138, 70);
+        border-radius: 6px;
+    }
+    .menuCompra{
+        display: none;
+        
+    }
+    .botomCompra:hover {
+        border: white solid 2px;
+    }
+    .botomCompra:hover + .menuCompra{
+        display: grid;
+    }
+    .menuCompra:hover{
+        display: grid;
+    }
+    .menuCompra:hover + a{
+        border: rgb(32, 32, 26) solid 2px;
+    }
+    aside{
+        display: none;
+    }
+    
+    main section{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    
+    footer nav div{
+        display: flex;
+        justify-content: space-between;
+        margin-left: 250px;
+        margin-top: 0px;
+        padding-top: 0px;
+
+    }
+    footer nav div a{
+        padding: 9px;
+        margin: 1px;
+        text-align: center;
+        color: cornsilk;
+        background-color: rgb(95, 146, 95);
+        border: solid 1px;
+        border-radius: 10px;
+        
+    }
+
+    aside{
+        padding: 0px;
+        margin: 0px;
+    }
+
+
+    .comprar:hover + aside{
+        display: grid;
+    }
+    
+   
+}

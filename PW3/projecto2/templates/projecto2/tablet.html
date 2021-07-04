@@ -1,0 +1,185 @@
+{% extends 'projecto2/base.html' %}
+
+
+
+{% block main %}
+        <br>
+    <br>
+        <section>
+            <div>
+                <a href="{% url 'projecto2:encomenda' %}">
+                    {% load static %}
+                    <img src=" {% static './projecto2/images/tab2.png' %} " alt="">
+                    <p>
+                        Iphone 1100€
+                    </p>
+                </a>
+            </div>
+            <div>
+                <a href="{% url 'projecto2:encomenda' %}">
+                    {% load static %}
+                    <img src=" {% static './projecto2/images/tab3.png' %} " alt="">
+                    <p> 
+                        LG 100€
+                    </p>
+                </a>
+                
+            </div>
+            <div>
+                <a href="{% url 'projecto2:encomenda' %}">
+                    {% load static %}
+                    <img src=" {% static './projecto2/images/tab14.png' %}" alt="">
+                    <p>
+                        HUAWEI P40  1001€
+                    </p>
+                </a>
+                
+            </div>
+            <div>
+                <a href="{% url 'projecto2:encomenda' %}">
+                    {% load static %}
+                    <img src=" {% static './projecto2/images/tab5.png' %} " alt="">
+                    <p>
+                        HUAWEI  800€
+                    </p>
+                </a>   
+            </div>
+            <div>
+                <a href="{% url 'projecto2:encomenda' %}">
+                    {% load static %}
+                    <img src=" {% static './projecto2/images/tab6.png' %} " alt="">
+                    <p>
+                        IPHONE 1100€
+                    </p>
+                </a> 
+            </div>
+            <div>
+                <a href="{% url 'projecto2:encomenda' %}">
+                    {% load static %}
+                    <img src=" {% static './projecto2/images/tab7.png' %} " alt="">
+                    <p>IPHONE 1400€</p>
+                </a>
+            </div>
+            <div>
+                <a href="{% url 'projecto2:encomenda' %}">
+                    {% load static %}
+                    <img src=" {% static './projecto2/images/tab8.png' %} " alt="">
+                    <P>IPHONE 1800€</P>
+                </a>
+            </div>
+            <div>
+                <a href="{% url 'projecto2:encomenda' %}">
+                    {% load static %}
+                    <img src=" {% static './projacto2/images/tab8.png' %} " alt="">
+                    <P>Samsung 1000€</P>
+                </a>    
+            </div>
+            <div>
+                <a href="{% url 'projecto2:encomenda' %}">
+                    {% load static %}
+                    <img src=" {% static './projacto2/images/tab10.png' %} " alt="">
+                    <P>LG 500€</P>
+                </a>
+            </div>
+            <div>
+                <a href="{% url 'projecto2:encomenda' %}">
+                    {% load static %}
+                    <img src=" {% static './projacto2/images/tab11.png' %}" alt="">
+                    <P>XIAOMI 200€</P>
+                </a>
+            </div>
+            <div>
+                <a href="{% url 'projecto2:encomenda' %}">
+                    {% load static %}
+                    <img src=" {% static './projacto2/images/tab12.jpeg' %} eg" alt="">
+                    <P>IPHONE 900€</P>
+                </a>
+                
+            </div>
+            <div>
+                <a href="{% url 'projecto2:encomenda' %}">
+                    {% load static %}
+                    <img src=" {% static './projacto2/images/tab13.png' %}" alt="">
+                    <P>HOLOS 400€</P>
+                </a>
+            </div>
+            <div>
+                <a href="{% url 'projecto2:encomenda' %}">
+                    {% load static %}
+                    <img src=" {% static './projacto2/images/tab14.png' %}" alt="">
+                    <p>HUAWEI 560€</p>
+                </a>
+            </div>
+            <div>
+                <a href="{% url 'projecto2:encomenda' %}">
+                    {% load static %}
+                    <img src=" {% static './projacto2/images/tab15.jpeg' %} eg" alt="">
+                    <P>Samsung 420€</P>
+                </a>
+            </div>
+            <div>
+                <a href="{% url 'projecto2:encomenda' %}">
+                    {% load static %}
+                    <img src=" {% static './projacto2/images/tab16.png' %} " alt="">
+                    <p>LG 760€</p>
+                </a>
+            </div>
+            <div>
+                <a href="{% url 'projecto2:encomenda' %}">
+                    {% load static %}
+                    <img src=" {% static './projacto2/images/tab17.jpeg' %}" alt="">
+                    <p>IPhone 1500€</p>
+                </a>
+            </div>
+            <div>
+                <a href="{% url 'projecto2:encomenda' %}">
+                    {% load static %}
+                    <img src=" {% static './projacto2/images/tab5.png' %} " alt="">
+                    <p>LG</p>
+                </a>
+            </div>
+            <div>
+                <a href="{% url 'projecto2:encomenda' %}">
+                    {% load static %}
+                    <img src=" {% static './projacto2/images/tab19.png' %} " alt="">
+                    <p>Nokia 300€</p>
+                </a>
+            </div>
+            <div>
+                {% load static %}
+                <img src=" {% static './projacto2/images/tab21.png' %}" alt="">
+                <p>Samsung 700€</p>
+            </div>
+            <div>
+                <a href="{% url 'projecto2:encomenda' %}">
+                    {% load static %}
+                    <img src=" {% static './projacto2/images/tab2.png' %} " alt="">
+                    <p>IPhone 1300€</p>
+                </a>
+            </div>
+            
+        </section>
+            
+{% endblock  %}
+
+{% block aside %}
+
+        <nav>
+            <input type="checkbox" id="n">
+            <label class="menu" for="n">Menu</label>
+            <ul class="janelaMenu">
+                <li><a href="{% url 'projecto2:computador' %}">Computadores</a></li>
+                <li><a href="{% url 'projecto2:telefone' %}">Telemóveis</a></li> 
+                <li><a href="{% url 'projecto2:tablet' %}">Table</a></li>
+            </ul>
+        </nav>
+{% endblock  %}
+
+{% block footer %}
+
+        <nav>
+            <div><a href="./Sobre.html">Sobre</a></div>
+            <div><a href="./contacto.html">Contacto</a></div>
+            <div><a href="./informacao.html">Informação</a></div>  
+        </nav>
+{% endblock  %}
