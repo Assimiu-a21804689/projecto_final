@@ -1,0 +1,30 @@
+{% extends 'index.html' %}
+
+{% block main %}
+
+  <h1>Conseguiu chegar aqui {{user.username}}</h1>
+    
+    <form class="row g-3" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="col-md-12">
+            <label for="imagem" class="form-label">Seleciona Seus ficheiros para guardar</label>
+            <input class="form-control" type="file" multiple name="imagem" id="imagem">
+        </div>
+
+        <div class="col-md-12">
+            <label for="titulo" class="form-label">Titulo da foto</label>
+            <input type="text" class="form-control" name="titulo" id="titulo" rows="3"></textarea>         
+        </div>
+
+        <div class="col-md-12">
+            <label for="descricao" class="form-label">Descrição de foto</label>
+            <textarea class="form-control" name="descricao" id="descricao" rows="3"></textarea>         
+        </div>
+
+        <div class="col-md-12">
+            <input type="submit" class="form-control" id="submit" name="submit">
+        </div>
+    </form>
+
+
+{% endblock  %}

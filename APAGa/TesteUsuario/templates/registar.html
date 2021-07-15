@@ -1,0 +1,70 @@
+{% extends 'index.html' %}
+
+
+{% block main %}
+    <form method="post" class="row g-3">
+        {% csrf_token %}
+
+        <div class="col-md-4">
+            <label for="validationServer01" class="form-label">Nome</label>
+            <div type="text" class="form-control is-valid" id="validationServer01" name="nome" value="Mark" required> 
+                {{form.nome}}
+            </div>
+            <div class="valid-feedback">
+                Campo obrigatório
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <label for="validationServer01" class="form-label">Apelido</label>
+            <div type="text" class="form-control is-valid" id="validationServer01" name="apelido" value="Mark" required> 
+                {{form.apelido}}
+            </div>
+            <div class="valid-feedback">
+                Campo obrigatório
+            </div>
+        </div>
+        <div class="col-md-4">
+            <label for="validationServer01" class="form-label">Data de Nascimento</label>
+            <div type="text" class="form-control is-valid" id="validationServer01" name="dataNascimento" value="Mark" required> 
+                {{form.dataNascimento}}
+            </div>
+            <div class="valid-feedback">
+                Campo obrigatório
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <label for="validationServer01" class="form-label">E-mail</label>
+            <div type="text" class="form-control is-valid" id="validationServer01" name="email" value="Mark" required> 
+                {{form.username}}
+            </div>
+            <div class="valid-feedback">
+                Campo obrigatório
+            </div>
+        </div>
+        <div class="col-md-4">
+            <label for="validationServer01" class="form-label">Senha</label>
+            <div type="text" class="form-control is-valid" id="validationServer01" name="senha1" value="Mark" required> 
+                {{form.password1}}
+            </div>
+            <div class="valid-feedback">
+                Campo obrigatório
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <label for="validationServer01" class="form-label">Confirmação de senha</label>
+            <div type="text" class="form-control is-valid" id="validationServer01" name="senha2" value="Mark" required> 
+                {{form.password2}}
+            </div>
+            <div class="valid-feedback">
+                Campo obrigatório
+            </div>
+        </div>
+        
+
+        <input type="submit" class="form-control">
+        
+    </form>
+{% endblock  %}

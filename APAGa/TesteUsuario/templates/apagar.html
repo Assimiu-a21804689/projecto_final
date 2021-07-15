@@ -1,0 +1,30 @@
+{% extends 'index.html' %}
+
+{% block cabeca %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" >
+{% endblock %}
+
+{% block main %}
+    <main class="vf-main">
+        <img class="vf-img" src="static/{{fotoApagar.foto}}" alt="">
+    </main>
+
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <div class="d-grid gap-2 col-6 mx-auto">
+            
+            <a href="{% url 'TesteUsuario:confirmacao' fotoApagar.pk %}" class="btn btn-outline-secondary">
+                <button class="btn btn-outline-danger">Confirmar</button>
+            </a>
+            <a href=" {% url 'TesteUsuario:principal'  %} " class="btn btn-outline-secondary">
+                <button class="btn btn-outline-success" >Cancelar</button>
+            </a>
+        </div>
+    </div>
+
+
+{% endblock %}
+
+{% block pesquisa %}
+
+{% endblock %}

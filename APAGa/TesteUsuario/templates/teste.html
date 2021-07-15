@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            let carousInner = document.createElement("div");
+            carousInner.className = "carousel-inner"
+            let novoAtributo = document.createAttribute("data-bus-interval")
+            novoAtributo.value = "1000"
+            carousInner.setAttributeNode(novoAtributo)
+
+            let imagem = document.createElement("img")
+            imagem.className = "d-block w-100"
+            let src = document.createAttribute("src")
+            src.value = "static/meus/ficheiros/1.png"
+            imagem.setAttributeNode(src)
+            carousInner.appendChild(imagem)
+
+            document.body.appendChild(carousInner)
+        })
+
+        
+        
+    </script>
+</head>
+<body>
+    <button id ="n">
+        clica
+    </button>
+    
+    <img src="static/meus/ficheiros/1.png" alt="">
+    
+</body>
+</html>

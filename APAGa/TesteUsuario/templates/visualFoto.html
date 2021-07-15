@@ -1,0 +1,29 @@
+{% extends 'index.html' %}
+
+
+
+{% block cabeca %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" >
+{% endblock %}
+
+{% block main %}
+    <main class="vf-main">
+        <img class="vf-img" src="static/{{fotoVisual.foto}}" alt="">
+    </main>
+    
+
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <div class="d-grid gap-2 col-6 mx-auto">
+            
+            <a href="{% url 'TesteUsuario:editar' fotoVisual.pk %}" class="btn btn-outline-secondary">
+                <button class="btn btn-outline-success">Editar</button>
+            </a>
+            <a href=" {% url 'TesteUsuario:apagar' fotoVisual.pk %} " class="btn btn-outline-secondary">
+                <button class="btn btn-outline-danger" >Apagar</button>
+            </a>
+        </div>
+    </div>
+    
+{% endblock %}
+

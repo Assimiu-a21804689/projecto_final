@@ -1,0 +1,47 @@
+.link{
+    color: #000;
+    text-decoration: none;
+}
+.fotos, .card{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-top: 10px; 
+}
+body{
+    background-color: #B73838;
+}
+.card{
+    width: 20rem;
+}
+
+.titulo{
+    align-items: center;
+    text-align: center;
+}
+
+.vf-img{
+    width: 70%;
+    margin-left: 15%;
+}
+
+
+
+@media all and (max-width: 600px) {
+    .vf-img{
+        width: 100%;
+        height: 70%;
+        margin-left: 0%;
+    }
+    .fotos, .card{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+    .card{
+        width: 17rem;
+        margin-top: 1rem;
+        padding-top: 1rem;
+    }
+
+    
+}

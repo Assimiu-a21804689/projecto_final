@@ -1,0 +1,38 @@
+{% extends 'index.html' %}
+
+
+
+{% block cabeca %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" >
+{% endblock %}
+
+{% block main %}
+    <main class="vf-main">
+        <img class="vf-img" src="static/{{foto.foto}}" alt="">
+    </main>
+    <form method="post" class="row g-3">
+        {% csrf_token %}
+        
+        <div class="col-md-12">
+            <label for="titulo" class="form-label">titulo</label>
+            <input type="text" value="{{fotoEditar.titulo.value}}" id="titulo" class="form-control" placeholder="Assimiu" name="titulo"> 
+        </div>
+
+        <div class="col-md-12">
+            <label for="descricao" class="form-label">descricao</label>
+            <textarea value="xcas" id="descricao" class="form-control" placeholder="Assimiu" name="descricao">{{fotoEditar.descricao.value}}</textarea>
+        </div>
+        
+        <div class="col-md-12">
+            <input class="form-control" type="submit" value="Guardar">
+        </div>
+        
+    </form>
+
+    
+{% endblock %}
+
+{% block pesquisa %}
+
+{% endblock %}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" >
+    <link rel="stylesheet" href="{% static 'css/css/bootstrap.min.css'%}" >
+    <script src="{% static 'css/js/bootstrap.bundle.min.js' %}"></script>
+
+
+</head>
+
+<body>
+    
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #336633;">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+            
+                <a class="navbar-brand" href="#">
+                    <button class="btn btn-primary " style="background-color: #333300"> Perfil</button>
+                </a>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href=" {% url 'TesteUsuario:principal' %}">{{user}}</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'TesteUsuario:registar' %}">Registar</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'TesteUsuario:conetar' %}">Iniciar Sessão</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'TesteUsuario:carregarFoto' %}">Carregar Fotos</a>
+                        </li>
+
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'TesteUsuario:disconetar' %}">Disconectar</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" method="POST">
+                        {% csrf_token %}
+                        <input class="form-control me-2" type="search" placeholder="Nome da foto" aria-label="Search" name="pesquisa">
+                        <button class="btn btn-outline-success" type="submit">Pesquisar</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="fotos">
+        
+        {% for foto in fotos %}
+            {% if user == foto.usuario %}
+                <a class="link" href="{% url 'TesteUsuario:visualFoto' foto.pk%}">
+                    <div class="card" style="background-color: #FFFFCC; font-family: Georgia, 'Times New Roman', Times, serif;">
+                        <img src="static/{{foto.foto}}" class="card-img-top" alt="..." height="180vh">
+                        <div class="card-body" >
+                            <h5 class="card-text" id ="titulo" >
+                                {{foto.titulo}}
+                                <hr>
+                            </h5>
+                            <p class="card-text" style="border-radius: 1%; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                                {{foto.descricao}}
+                            </p>
+                        </div>
+                    </div>
+                </a>
+               
+            {% endif %}
+        {% endfor %}
+
+
+        {% if user == "AnonymousUser" %}
+        
+            <h1>Pequisa não existe</h1>
+        {% endif %}
+    </main>
+</body>
+</html>
+    
+
+
+  
